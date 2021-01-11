@@ -52,12 +52,12 @@ class AuthenticationService {
         return user
     }
 
-    setupAxiosInterception(basicAuthHeader) {
+    setupAxiosInterception(token) {
         
         axios.interceptors.request.use(
             (config) => {
                 if (this.isUserLoggedIn()) {
-                    config.headers.authorization = basicAuthHeader
+                    config.headers.authorization = token
                 }
                 return config
             }
