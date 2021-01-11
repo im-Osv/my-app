@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { API_URL } from '../../Constants.js'
+import { API_URL } from '../../Constants'
 
 class TodoDataService {
     retrieveAllTodos(name) {

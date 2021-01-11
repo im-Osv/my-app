@@ -34,3 +34,4 @@ public class  JwtTokenRequest implements Serializable {
         this.password = password;
     }
 }
+

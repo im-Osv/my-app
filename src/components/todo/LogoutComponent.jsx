@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
 class LogoutComponent extends Component {
     render() {
@@ -6,11 +6,11 @@ class LogoutComponent extends Component {
             <>
                 <h1>You are logged out</h1>
                 <div className="container">
-                    Thank you for Using our Application
+                    Thank You for Using Our Application.
                 </div>
             </>
         )
     }
 }
 
-export default LogoutComponent;
+export default LogoutComponent
