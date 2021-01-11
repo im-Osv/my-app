@@ -86,4 +86,7 @@ public class JwtAuthenticationRestController {
     }
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7915b3a

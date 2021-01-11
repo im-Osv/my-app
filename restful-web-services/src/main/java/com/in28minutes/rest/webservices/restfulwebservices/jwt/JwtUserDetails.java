@@ -74,6 +74,10 @@ public class JwtUserDetails implements UserDetails {
     return true;
   }
 
+<<<<<<< HEAD
 }
 
 
+=======
+}
+>>>>>>> 7915b3a

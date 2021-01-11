@@ -59,7 +59,7 @@ class TodoComponent extends Component {
             TodoDataService.updateTodo(username, this.state.id, todo)
                 .then(() => this.props.history.push('/todos'))
         }
-
+        
         console.log(values);
     }
 
@@ -72,8 +72,8 @@ class TodoComponent extends Component {
             <div>
                 <h1>Todo</h1>
                 <div className="container">
-                    <Formik
-                        initialValues={{ description, targetDate }}
+                <Formik 
+                        initialValues={{description,targetDate}}
                         onSubmit={this.onSubmit}
                         validateOnChange={false}
                         validateOnBlur={false}

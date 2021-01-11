@@ -4,4 +4,7 @@ public class AuthenticationException extends RuntimeException {
         super(message, cause);
     }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7915b3a

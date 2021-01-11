@@ -56,22 +56,39 @@ class LoginComponent extends Component {
         // AuthenticationService
         // .executeBasicAuthenticationService(this.state.username, this.state.password)
         // .then(() => {
+<<<<<<< HEAD
         //         AuthenticationService.registerSuccessfulLogin(this.state.username, this.state.password)
         //         this.props.history.push(`/welcome/${this.state.username}`)
         // }).catch(() => {
         //     this.setState({ showSuccessMessage: false })
         //     this.setState({ hasLoginFailed: true })
+=======
+        //     AuthenticationService.registerSuccessfulLogin(this.state.username,this.state.password)
+        //     this.props.history.push(`/welcome/${this.state.username}`)
+        // }).catch( () =>{
+        //     this.setState({showSuccessMessage:false})
+        //     this.setState({hasLoginFailed:true})
+>>>>>>> 7915b3a
         // })
 
         AuthenticationService
         .executeJwtAuthenticationService(this.state.username, this.state.password)
         .then((response) => {
+<<<<<<< HEAD
                 AuthenticationService.registerSuccessfulLoginForJwt(this.state.username, response.data.token)
                 this.props.history.push(`/welcome/${this.state.username}`)
         }).catch(() => {
             this.setState({ showSuccessMessage: false })
             this.setState({ hasLoginFailed: true })
+=======
+            AuthenticationService.registerSuccessfulLoginForJwt(this.state.username,response.data.token)
+            this.props.history.push(`/welcome/${this.state.username}`)
+        }).catch( () =>{
+            this.setState({showSuccessMessage:false})
+            this.setState({hasLoginFailed:true})
+>>>>>>> 7915b3a
         })
+
     }
 
 
