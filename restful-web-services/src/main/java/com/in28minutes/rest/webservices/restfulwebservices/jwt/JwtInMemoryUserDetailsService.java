@@ -27,17 +27,8 @@ public class JwtInMemoryUserDetailsService implements UserDetailsService {
     if (!findFirst.isPresent()) {
       throw new UsernameNotFoundException(String.format("USER_NOT_FOUND '%s'.", username));
     }
-<<<<<<< HEAD
 
     return findFirst.get();
   }
 
 }
-
-
-=======
-
-    return findFirst.get();
-  }
-}
->>>>>>> 7915b3a

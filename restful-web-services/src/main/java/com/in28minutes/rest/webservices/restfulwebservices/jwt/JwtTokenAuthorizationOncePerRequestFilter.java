@@ -71,8 +71,3 @@ public class JwtTokenAuthorizationOncePerRequestFilter extends OncePerRequestFil
         chain.doFilter(request, response);
     }
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7915b3a
