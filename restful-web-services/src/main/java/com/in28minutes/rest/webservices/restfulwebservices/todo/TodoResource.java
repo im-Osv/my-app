@@ -16,40 +16,39 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.in28minutes.rest.webservices.restfulwebservices.todo.Todo;
-
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class TodoResource {
-	
+
 	@Autowired
 	private TodoHardcodedService todoService;
-	
+
 	@GetMapping("/users/{username}/todos")
-	public List<Todo> getAllTodos(@PathVariable String username){
+	public List<Todo> getAllTodos(@PathVariable String username) {
+		// Thread.sleep(3000);
 		return todoService.findAll();
 	}
-
+	
 	@GetMapping("/users/{username}/todos/{id}")
-	public Todo getTodo(@PathVariable String username, @PathVariable long id){
+	public Todo getTodo(@PathVariable String username, @PathVariable long id) {
+		// Thread.sleep(3000);
 		return todoService.findById(id);
 	}
 
-	//DELETE /users/{username}/todos/{id}
+
+	// DELETE /users/{username}/todos/{id}
 	@DeleteMapping("/users/{username}/todos/{id}")
-	public ResponseEntity<Void> deleteTodo(
-			@PathVariable String username, @PathVariable long id){
-		
+	public ResponseEntity<Void> deleteTodo(@PathVariable String username, @PathVariable long id) {
+
 		Todo todo = todoService.deleteById(id);
-		
-		if(todo!=null) {
+
+		if (todo != null) {
 			return ResponseEntity.noContent().build();
 		}
-		
+
 		return ResponseEntity.notFound().build();
 	}
 	
-
 	//Edit/Update a Todo
 	//PUT /users/{user_name}/todos/{todo_id}
 	@PutMapping("/users/{username}/todos/{id}")
